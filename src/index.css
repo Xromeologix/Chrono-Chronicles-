@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .animate-slash {
+    animation: slash 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
+  }
+  .animate-slash-delayed {
+    animation: slash 0.3s cubic-bezier(0.1, 0.9, 0.2, 1) 0.15s forwards;
+  }
+}
+
+@keyframes slash {
+  0% {
+    transform: scaleX(0) rotate(var(--tw-rotate));
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1) rotate(var(--tw-rotate));
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1) rotate(var(--tw-rotate));
+    opacity: 0;
+  }
+}
